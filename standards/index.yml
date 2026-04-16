@@ -1,0 +1,33 @@
+api:
+  admin-routes:
+    description: requireAdminApi() + logAdminActivity() pattern for admin route handlers
+  auth-and-validation:
+    description: Stack Auth usage, Zod safeParse, what to expose vs hide in errors
+  rate-limiting:
+    description: IP limiter before auth, kvCheck per user — order matters
+  response-format:
+    description: Route Handler vs Server Action response shapes and error handling
+
+auth:
+  encryption:
+    description: CPF and Pix key always encrypted via prisma-field-encryption
+  roles:
+    description: CLIENTE / FOTOGRAFO / ADMIN roles and how to verify them
+  stack-auth:
+    description: useUser() client-side vs getAuthenticatedUser() server-side
+
+database:
+  prisma:
+    description: serializeModel() for Client Components, dayjs for dates, no direct DB access from client
+
+financial:
+  money:
+    description: Prisma.Decimal for money, $transaction for balance ops, webhook as source of truth
+  pagarme:
+    description: Pagar.me integration via lib/pagarme.js, values always in centavos
+
+ui:
+  components:
+    description: shadcn/ui required, no native buttons, no hardcoded colors, one component per file
+  forms:
+    description: React Hook Form + Zod + shadcn Form component — mandatory trio
